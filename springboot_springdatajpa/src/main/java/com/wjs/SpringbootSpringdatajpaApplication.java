@@ -10,4 +10,5 @@ public class SpringbootSpringdatajpaApplication {
         SpringApplication.run(SpringbootSpringdatajpaApplication.class, args);
     }
 
+
 }
