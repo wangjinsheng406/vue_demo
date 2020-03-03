@@ -13,14 +13,13 @@
 		</div>
 	</body>
 	<script>
-		//view model
 		new Vue({
 			el:"#app",
 			methods:{
 				fun:function (event) {
 					var keyCode = event.keyCode;
 					if (keyCode < 48 || keyCode > 57){
-						event.preventDefault();
+						event.preventDefault();//阻止键盘事件
 					}
 				}
 			}

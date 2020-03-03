@@ -1,7 +1,7 @@
 new Vue({
-    el:"#app",
+    el:"#app",//表示当前vue对象接管了div区域
     data:{
-        user: {
+        user: {//定义了一个user对象
             id: "",
             username: "",
             password: "",
@@ -9,11 +9,11 @@ new Vue({
             sex: "",
             email: ""
         },
-        userList:[]
+        userList:[]//定义了一个存放user的list集合
     },
-    methods:{
+    methods:{//对应controller中的三个查询方法
         findAll:function () {
-            var _this = this;
+            var _this = this;//应用vue对象
             axios.get('/vuejs/user/find_all.do').then(function(response){
                     _this.userList = response.data;
                 })
@@ -40,7 +40,7 @@ new Vue({
                 });
         }
     },
-    created(){
+    created(){//vue对象创建即调用查询
         this.findAll();
     }
 });
